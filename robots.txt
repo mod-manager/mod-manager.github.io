@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mod-manager.github.io/sitemap.xml
