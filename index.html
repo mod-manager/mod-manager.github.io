@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Mod Manager и Vortex — мод менеджеры для игр | Скачать и сравнить</title>
+    <meta name="description" content="Скачать мод менеджер для Skyrim, Fallout и других игр: чем заменить Nexus Mod Manager. Сравнение Vortex и Mod Organizer 2, инструкция по установке модов, ответы на вопросы.">
+    <meta name="keywords" content="mod manager, мод менеджер, nexus mod manager, некус мод менеджер, нексус мод менеджер, менеджер модов, vortex, mod organizer 2, NMM, скачать мод менеджер, моды для skyrim, моды для fallout">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mod-manager.github.io/">
+    <!-- Вставьте мета-тег верификации из Яндекс.Вебмастера:
+    <meta name="yandex-verification" content="КОД"> -->
+    <!-- Сюда вставьте код счётчика Яндекс.Метрики -->
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nexus Mod Manager и Vortex — мод менеджеры для игр">
+    <meta property="og:description" content="Какой мод менеджер скачать в 2025 году: сравнение Nexus Mod Manager, Vortex и Mod Organizer 2 + инструкция по установке модов.">
+    <meta property="og:url" content="https://mod-manager.github.io/">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Mod Manager — гид по менеджерам модов",
+        "url": "https://mod-manager.github.io/",
+        "inLanguage": "ru"
+    }
+    </script>
+
+    <!-- JSON-LD: SoftwareApplication (уберите блок, если modmanager.exe — не ваш продукт) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Mod Manager",
+        "operatingSystem": "Windows",
+        "applicationCategory": "UtilitiesApplication",
+        "softwareVersion": "1.0",
+        "downloadUrl": "https://github.com/mod-manager/mod-manager.github.io/releases/download/modmanager/modmanager.exe"
+    }
+    </script>
+
+    <!-- JSON-LD: FAQPage (текст совпадает с видимым FAQ ниже) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Nexus Mod Manager ещё работает?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Нет, Nexus Mod Manager официально закрыт. Разработка прекращена в 2018 году после анонса Vortex. С сайта Nexus Mods менеджер модов больше не скачивается. Для установки модов используйте Vortex — официальную замену NMM." }
+            },
+            {
+                "@type": "Question",
+                "name": "Какой мод менеджер скачать в 2025 году?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Новичкам подойдёт Vortex — официальный менеджер модов от Nexus Mods с поддержкой более 100 игр. Для крупных сборок модов для Skyrim и Fallout лучше Mod Organizer 2: он изолирует игру от модов через виртуальную файловую систему." }
+            },
+            {
+                "@type": "Question",
+                "name": "Безопасно ли скачивать старый Nexus Mod Manager со сторонних сайтов?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Нет, это небезопасно. Официальная загрузка NMM прекращена, а переупакованные установщики на сторонних сайтах часто содержат вирусы и вредоносное ПО. Используйте только официальный Vortex с сайта nexusmods.com." }
+            },
+            {
+                "@type": "Question",
+                "name": "Подходит ли Vortex для Skyrim и Fallout?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Да. Vortex поддерживает более 100 игр, включая Skyrim Special Edition, Fallout 4, Fallout New Vegas и другие игры Bethesda. Для простых наборов модов Vortex — оптимальный выбор, для сборок на 300+ модов лучше Mod Organizer 2." }
+            },
+            {
+                "@type": "Question",
+                "name": "Чем Mod Organizer 2 лучше Vortex?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Mod Organizer 2 использует виртуальную файловую систему: папка игры остаётся чистой, все моды лежат отдельно. MO2 поддерживает полноценные профили с разными наборами модов и ручную настройку приоритетов конфликтов. Это делает его удобнее для больших модификаций." }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #0d0d0d;
+            --bg-card: #161616;
+            --text: #e8e8e8;
+            --muted: #8f8f8f;
+            --border: #262626;
+            --accent: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        a { color: var(--text); text-decoration: none; transition: color .2s; }
+        a:hover { color: var(--accent); }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3 { text-transform: uppercase; letter-spacing: 1.5px; line-height: 1.3; }
+        h1 { font-size: clamp(1.6rem, 4vw, 2.5rem); }
+        h2 { font-size: clamp(1.25rem, 3vw, 1.7rem); margin-bottom: 24px; }
+        h3 { font-size: 1.05rem; margin-bottom: 8px; }
+        p { margin-bottom: 14px; }
+        section { padding: 70px 0; scroll-margin-top: 80px; }
+        .muted { color: var(--muted); font-size: .92rem; }
+
+        /* Шапка */
+        header.site {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(13,13,13,.94);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border);
+        }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+        .logo { font-family: Consolas, "Courier New", monospace; letter-spacing: 3px; font-weight: 700; color: var(--accent); }
+        nav ul { display: flex; gap: 26px; list-style: none; }
+        nav a { font-size: .82rem; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+        nav a:hover { color: var(--accent); }
+        .burger { display: none; background: none; border: 1px solid var(--border); color: var(--text); font-size: 1.3rem; padding: 4px 12px; cursor: pointer; }
+
+        /* Кнопки */
+        .btn {
+            display: inline-block; padding: 14px 30px; font-size: .95rem;
+            text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;
+            border: 1px solid var(--accent); transition: all .2s; cursor: pointer;
+        }
+        .btn-primary { background: var(--accent); color: #0d0d0d; }
+        .btn-primary:hover { background: transparent; color: var(--accent); }
+        .btn-ghost { background: transparent; color: var(--text); border-color: var(--border); }
+        .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+        /* Hero */
+        .hero { padding: 150px 0 80px; text-align: center; }
+        .hero p.sub { color: var(--muted); max-width: 640px; margin: 18px auto 32px; }
+        .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        /* Секция скачивания */
+        .dl-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 32px; text-align: center; max-width: 560px; margin: 0 auto;
+        }
+        .dl-file { font-family: Consolas, monospace; font-size: 1.15rem; color: var(--accent); margin-bottom: 4px; }
+        .dl-meta { color: var(--muted); font-size: .88rem; margin-bottom: 22px; }
+        .dl-note { margin-top: 18px; font-size: .85rem; color: var(--muted); text-align: left; }
+        .dl-alt { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border); font-size: .9rem; }
+
+        /* Таймлайн */
+        .timeline { list-style: none; border-left: 2px solid var(--border); margin-left: 10px; }
+        .timeline li { position: relative; padding: 0 0 26px 28px; }
+        .timeline li::before {
+            content: ""; position: absolute; left: -7px; top: 7px;
+            width: 12px; height: 12px; border-radius: 50%;
+            background: var(--bg); border: 2px solid var(--accent);
+        }
+        .timeline .year { font-family: Consolas, monospace; color: var(--accent); font-weight: 700; }
+
+        /* Таблица */
+        .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
+        table { width: 100%; border-collapse: collapse; min-width: 620px; }
+        th, td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--border); }
+        thead th { background: var(--bg-card); text-transform: uppercase; font-size: .8rem; letter-spacing: 1px; color: var(--accent); }
+        tbody tr:last-child td { border-bottom: none; }
+        tbody tr:hover { background: var(--bg-card); }
+        td:first-child { color: var(--muted); }
+
+        /* Карточки */
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 26px; transition: border-color .2s; }
+        .card:hover { border-color: var(--accent); }
+        .card .tag { display: inline-block; font-size: .72rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 3px 12px; margin-bottom: 14px; }
+
+        /* Шаги */
+        .steps { list-style: none; counter-reset: step; }
+        .steps li { counter-increment: step; position: relative; padding: 0 0 26px 62px; }
+        .steps li::before {
+            content: counter(step); position: absolute; left: 0; top: 0;
+            width: 42px; height: 42px; border: 1px solid var(--accent); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-family: Consolas, monospace; font-weight: 700; color: var(--accent);
+        }
+
+        /* FAQ */
+        details { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; }
+        summary { padding: 18px 22px; cursor: pointer; font-weight: 600; list-style: none; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: "+"; float: right; font-size: 1.3rem; color: var(--muted); }
+        details[open] summary::after { content: "−"; }
+        details .answer { padding: 0 22px 18px; color: var(--muted); }
+
+        footer { border-top: 1px solid var(--border); padding: 36px 0; margin-top: 40px; }
+        footer .links { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 14px; }
+        footer a { color: var(--muted); font-size: .88rem; }
+        footer a:hover { color: var(--accent); }
+
+        /* Мобильные */
+        @media (max-width: 760px) {
+            .burger { display: block; }
+            nav { display: none; position: absolute; top: 60px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 18px 20px; }
+            nav.open { display: block; }
+            nav ul { flex-direction: column; gap: 16px; }
+            section { padding: 50px 0; }
+            .hero { padding: 120px 0 60px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site">
+    <div class="container header-inner">
+        <a href="#" class="logo">MOD MANAGERS</a>
+        <button class="burger" id="burger" aria-label="Меню">☰</button>
+        <nav id="nav">
+            <ul>
+                <li><a href="#download">Скачать</a></li>
+                <li><a href="#history">История</a></li>
+                <li><a href="#compare">Сравнение</a></li>
+                <li><a href="#guide">Гайд</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Мод менеджеры для игр: Nexus Mod Manager, Vortex и Mod Organizer 2</h1>
+            <p class="sub">Полное руководство: чем заменить закрытый Nexus Mod Manager, как установить Vortex или Mod Organizer 2 и какой мод менеджер скачать в 2025 году.</p>
+            <div class="hero-btns">
+                <a class="btn btn-primary" href="https://github.com/mod-manager/mod-manager.github.io/releases/download/modmanager/modmanager.exe">⬇ Скачать мод менеджер</a>
+                <a class="btn btn-ghost" href="#compare">Сравнить менеджеры</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- СКАЧИВАНИЕ -->
+    <section id="download">
+        <div class="container">
+            <h2>Скачать мод менеджер</h2>
+            <div class="dl-card">
+                <div class="dl-file">modmanager.exe</div>
+                <div class="dl-meta">Версия 1.0 · Windows 10/11 · 64-bit</div>
+                <a class="btn btn-primary" href="https://github.com/mod-manager/mod-manager.github.io/releases/download/modmanager/modmanager.exe">⬇ Скачать modmanager.exe</a>
+                <p class="dl-note">Файл не имеет цифровой подписи, поэтому Windows SmartScreen может показать предупреждение при первом запуске. Нажмите «Подробнее → Выполнить в любом случае», если доверяете источнику. Рекомендуем проверить файл на VirusTotal перед установкой.</p>
+                <div class="dl-alt">
+                    Предпочитаете официальные решения?
+                    <a href="https://www.nexusmods.com/about/vortex/" target="_blank" rel="noopener">Vortex</a> — официальный менеджер Nexus Mods ·
+                    <a href="https://github.com/ModOrganizer2/modorganizer" target="_blank" rel="noopener">Mod Organizer 2</a> — от сообщества
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NMM -->
+    <section id="history">
+        <div class="container">
+            <h2>Что такое Nexus Mod Manager</h2>
+            <p><strong>Nexus Mod Manager (NMM)</strong> — бывший официальный менеджер модов крупнейшего сайта Nexus Mods. Программа позволяла скачивать и устанавливать моды в один клик прямо из браузера для Skyrim, Fallout 3, Fallout New Vegas, Fallout 4, Oblivion, Witcher и десятков других игр.</p>
+            <p>Сегодня NMM официально закрыт: разработка прекращена, с сайта Nexus менеджер модов больше не скачивается. Его заменил современный <strong>Vortex</strong>. Мы не рекомендуем искать старые сборки NMM на сторонних сайтах — переупакованные установщики часто содержат вирусы.</p>
+            <h3 style="margin-top:28px">История проекта</h3>
+            <ul class="timeline" style="margin-top:18px">
+                <li><span class="year">2011</span> — запуск Nexus Mod Manager как официального инструмента сайта</li>
+                <li><span class="year">2013</span> — разработку возглавляет Tannin, автор Mod Organizer</li>
+                <li><span class="year">2016</span> — конфликт вокруг изменений API Nexus, Tannin покидает проект</li>
+                <li><span class="year">2017</span> — Nexus анонсирует Vortex на основе новых наработок</li>
+                <li><span class="year">2018</span> — NMM официально отправлен на пенсию</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- СРАВНЕНИЕ -->
+    <section id="compare">
+        <div class="container">
+            <h2>Сравнение менеджеров модов</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>Критерий</th><th>NMM</th><th>Vortex</th><th>MO2</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Изоляция игры</td><td>Нет</td><td>Нет</td><td>Да — виртуальная ФС</td></tr>
+                        <tr><td>Профили модов</td><td>Нет</td><td>Базовые</td><td>Полноценные</td></tr>
+                        <tr><td>Обработка конфликтов</td><td>Авто</td><td>Авто</td><td>Ручная</td></tr>
+                        <tr><td>Коллекции Nexus</td><td>Нет</td><td>Да</td><td>Частично</td></tr>
+                        <tr><td>Сложность освоения</td><td>Простая</td><td>Простая</td><td>Средняя</td></tr>
+                        <tr><td>Статус поддержки</td><td>Закрыт</td><td>Активная</td><td>Активная</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАРТОЧКИ -->
+    <section id="managers">
+        <div class="container">
+            <h2>Какой мод менеджер выбрать</h2>
+            <div class="cards">
+                <article class="card">
+                    <span class="tag">Официальный</span>
+                    <h3>Vortex</h3>
+                    <p>Современный менеджер модов от Nexus Mods. Поддерживает 100+ игр, коллекции модов, автоматически обрабатывает конфликты. Идеальный выбор для новичка.</p>
+                    <p class="muted">Кому подходит: начинающим и тем, кто играет в 2–3 игры.</p>
+                </article>
+                <article class="card">
+                    <span class="tag">Для энтузиастов</span>
+                    <h3>Mod Organizer 2</h3>
+                    <p>Виртуальная файловая система — папка игры остаётся чистой. Профили с разными наборами модов, ручные приоритеты конфликтов.</p>
+                    <p class="muted">Кому подходит: большие сборки для Skyrim и Fallout, 300+ модов.</p>
+                </article>
+                <article class="card">
+                    <span class="tag">Не рекомендуется</span>
+                    <h3>Nexus Mod Manager</h3>
+                    <p>Легендарный, но закрытый менеджер. С официального сайта больше не распространяется. Копии со сторонних ресурсов — риск заражения.</p>
+                    <p class="muted">Кому подходит: никому — используйте Vortex.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ГАЙД -->
+    <section id="guide">
+        <div class="container">
+            <h2>Как установить моды: 4 шага</h2>
+            <ol class="steps">
+                <li><h3>Выберите менеджер</h3><p class="muted">Новичку — Vortex, для крупной сборки — Mod Organizer 2.</p></li>
+                <li><h3>Создайте аккаунт на nexusmods.com</h3><p class="muted">Бесплатная регистрация нужна для скачивания модов через любой менеджер.</p></li>
+                <li><h3>Установите менеджер модов</h3><p class="muted">Скачайте программу и следуйте мастеру установки.</p></li>
+                <li><h3>Подключите игру</h3><p class="muted">Укажите папку игры — менеджер сам определит её и настроит пути модов.</p></li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <h2>Частые вопросы</h2>
+            <details open>
+                <summary>Nexus Mod Manager ещё работает?</summary>
+                <p class="answer">Нет, Nexus Mod Manager официально закрыт. Разработка прекращена в 2018 году после анонса Vortex. С сайта Nexus Mods менеджер модов больше не скачивается. Для установки модов используйте Vortex — официальную замену NMM.</p>
+            </details>
+            <details>
+                <summary>Какой мод менеджер скачать в 2025 году?</summary>
+                <p class="answer">Новичкам подойдёт Vortex — официальный менеджер модов от Nexus Mods с поддержкой более 100 игр. Для крупных сборок модов для Skyrim и Fallout лучше Mod Organizer 2: он изолирует игру от модов через виртуальную файловую систему.</p>
+            </details>
+            <details>
+                <summary>Безопасно ли скачивать старый Nexus Mod Manager со сторонних сайтов?</summary>
+                <p class="answer">Нет, это небезопасно. Официальная загрузка NMM прекращена, а переупакованные установщики на сторонних сайтах часто содержат вирусы и вредоносное ПО. Используйте только официальный Vortex с сайта nexusmods.com.</p>
+            </details>
+            <details>
+                <summary>Подходит ли Vortex для Skyrim и Fallout?</summary>
+                <p class="answer">Да. Vortex поддерживает более 100 игр, включая Skyrim Special Edition, Fallout 4, Fallout New Vegas и другие игры Bethesda. Для простых наборов модов Vortex — оптимальный выбор, для сборок на 300+ модов лучше Mod Organizer 2.</p>
+            </details>
+            <details>
+                <summary>Чем Mod Organizer 2 лучше Vortex?</summary>
+                <p class="answer">Mod Organizer 2 использует виртуальную файловую систему: папка игры остаётся чистой, все моды лежат отдельно. MO2 поддерживает полноценные профили с разными наборами модов и ручную настройку приоритетов конфликтов. Это делает его удобнее для больших модификаций.</p>
+            </details>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="links">
+            <a href="https://www.nexusmods.com/about/vortex/" target="_blank" rel="noopener">Vortex — официальный сайт</a>
+            <a href="https://github.com/ModOrganizer2/modorganizer" target="_blank" rel="noopener">Mod Organizer 2 на GitHub</a>
+            <a href="https://wiki.nexusmods.com" target="_blank" rel="noopener">Wiki Nexus Mods</a>
+        </div>
+        <p class="muted">Mod Manager — гид по менеджерам модов для игр. Nexus Mod Manager, Vortex и Mod Organizer 2.</p>
+    </div>
+</footer>
+
+<script>
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+    burger.addEventListener('click', () => nav.classList.toggle('open'));
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+</script>
+
+</body>
+</html>
